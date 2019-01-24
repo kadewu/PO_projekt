@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lvrSol_textView_timeInscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/time_inscription_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/timer_zero_value"
+        app:layout_constraintStart_toEndOf="@+id/lvrSol_textView_timeInscription"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_addedTimeInscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/added_time_pl"
+        app:layout_constraintEnd_toStartOf="@+id/lvrSol_textView_addedTime"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_addedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/date_pattern_pl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_algorithmInscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/algorithm_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_timeInscription" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_scramble"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_algorithmInscription" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_f2l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/f2l_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_scramble" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_xcross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/xcross_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_f2l" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_ollskip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/oll_skip_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_xcross" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_pllskip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/pll_skip_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_ollskip" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_f2l_parameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/lvrSol_textView_f2l"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_scramble" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_xcross_parameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/lvrSol_textView_xcross"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_f2l_parameter" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_ollskip_parameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/lvrSol_textView_ollskip"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_xcross_parameter" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_pllskip_parameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/lvrSol_textView_pllskip"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_ollskip_parameter" />
+
+    <CheckBox
+        android:id="@+id/lvrSol_checkBox_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="160dp"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lvrSol_textView_deleteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="87dp"
+        android:text="@string/delete_pl"
+        app:layout_constraintEnd_toStartOf="@+id/lvrSol_checkBox_delete"
+        app:layout_constraintTop_toBottomOf="@+id/lvrSol_textView_scramble" />
+</android.support.constraint.ConstraintLayout>

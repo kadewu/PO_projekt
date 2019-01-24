@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">PO</string>
+    <string name="menu_pl">Menu:</string>
+    <string name="gen_scramble_pl">Wygeneruj algorytm mieszający</string>
+    <string name="del_solution_pl">Usuń rozwiązanie</string>
+    <string name="timer_zero_value">00:00.00</string>
+    <string name="f2l_pl">F2L</string>
+    <string name="xcross_pl">XCross</string>
+    <string name="oll_skip_pl">OLL Skip</string>
+    <string name="pll_skip_pl">PLL Skip</string>
+    <string name="add_solution_pl">Dodaj rozwiązanie</string>
+    <string name="tap_to_start_and_stop_eng">Tap to start and stop</string>
+    <string name="start_timer_pl">Rozpocznij pomiar czasu</string>
+    <string name="algorithm_pl">Algorytm:</string>
+    <string name="date_pattern_pl">dd-mm-rrrr</string>
+    <string name="searching_to_delete_pl">Szukaj rozwiązań do usunięcia</string>
+    <string name="time_inscription_pl">Czas:</string>
+    <string name="added_time_pl">Data dodania:</string>
+    <string name="delete_pl">Usunąć</string>
+    <string name="delete_selected_solution_pl">Usuń wybrane rozwiazania</string>
+    <string name="user_warning_pl">Coś poszło nie tak</string>
+    <string name="back_to_menu_pl">Powrót do menu</string>
+    <string name="added_solution_pl">Dodano rozwiązanie</string>
+    <string name="seekbar_option_explanation_pl">Może Tak Nie</string>
+    <string name="confirm_delete_question_pl">Czy na pewno chcesz usunąć wybrane rozwiązania?</string>
+    <string name="confirm_pl">Potwierdź</string>
+    <string name="nothing_chosed_pl">Nie wybrałeś żadnych rozwiązań do usunięcia</string>
+    <string name="remove_solutions_pl">Usunięto rozwiązania</string>
+    <string name="wrong_date_pl">Upewnij się, żeby wprowadzić poprawnie daty</string>
+    <string name="from_pl">Od:</string>
+    <string name="to_pl">Do:</string>
+</resources>

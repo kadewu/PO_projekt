@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kris.po.PresentationLayer.DeleteSolutionActivity">
+
+    <EditText
+        android:id="@+id/delSol_editText_startDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/date_pattern_pl"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/delSol_editText_endDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/date_pattern_pl"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_editText_startDate" />
+
+    <TextView
+        android:id="@+id/delSol_text_view_f2l"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/f2l_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_editText_endDate" />
+
+    <TextView
+        android:id="@+id/delSol_text_view_xcross"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/xcross_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_text_view_f2l" />
+
+    <TextView
+        android:id="@+id/delSol_text_view_ollskip"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/oll_skip_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_text_view_xcross" />
+
+    <TextView
+        android:id="@+id/delSol_text_view_pllskip"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/pll_skip_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_text_view_ollskip" />
+
+    <Button
+        android:id="@+id/delSol_button_searching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/searching_to_delete_pl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_text_view_pllskip" />
+
+    <SeekBar
+        android:id="@+id/delSol_seekBar_f2l"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:max="2"
+        android:progress="0"
+        app:layout_constraintStart_toEndOf="@+id/delSol_text_view_f2l"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_editText_endDate" />
+
+    <SeekBar
+        android:id="@+id/delSol_seekBar_xcross"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="17dp"
+        android:max="2"
+        android:progress="0"
+        app:layout_constraintStart_toEndOf="@+id/delSol_text_view_xcross"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_seekBar_f2l" />
+
+    <SeekBar
+        android:id="@+id/delSol_seekBar_ollskip"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:max="2"
+        android:progress="0"
+        app:layout_constraintStart_toEndOf="@+id/delSol_text_view_ollskip"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_seekBar_xcross" />
+
+    <SeekBar
+        android:id="@+id/delSol_seekBar_pllskip"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:max="2"
+        android:progress="0"
+        app:layout_constraintStart_toEndOf="@+id/delSol_text_view_pllskip"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_seekBar_ollskip" />
+
+    <TextView
+        android:id="@+id/delSol_textView_explain"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/seekbar_option_explanation_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delSol_editText_endDate" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/from_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="54dp"
+        android:text="@string/to_pl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</android.support.constraint.ConstraintLayout>
