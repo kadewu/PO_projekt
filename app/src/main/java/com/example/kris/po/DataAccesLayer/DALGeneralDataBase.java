@@ -13,25 +13,48 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * general class to do operations on database, from this one other database classes inherits
+ */
+
 public class DALGeneralDataBase {
     protected Context context;
     private String DATA_BASE_NAME = "PO";
     private int VERSION = 1;
 
+    /**
+     *
+     * @param context important for android sqlite, {@link Context}
+     */
     public DALGeneralDataBase(Context context){
         this.context = context;
     }
 
+    /**
+     * attribute of private class use to connect with sqlite database
+     * DataBaseHelper inherit {@link SQLiteOpenHelper}
+     */
     protected DateBaseHelper dateBaseHelper = null;
 
+    /**
+     * open connection with database
+     */
     public void open(){
         dateBaseHelper = new DateBaseHelper(context, DATA_BASE_NAME, null, VERSION);
     }
 
+    /**
+     * close connection with database, throwing nullpointer exception, when connection isn't open first
+     */
     public void close(){
         dateBaseHelper.close();
     }
 
+    /**
+     *
+     * @param tableName name of table in database
+     * @return next available id in database
+     */
     protected int nextId(String tableName){
         SQLiteDatabase db = dateBaseHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT MAX(_id) FROM "+tableName+";", null);

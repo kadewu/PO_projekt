@@ -15,6 +15,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * class to do operation on "Rozwiazanie" table in database
+ */
+
+
 public class DALSolution extends DALGeneralDataBase {
     public static String TABLE_NAME = "Rozwiazanie";
     public static String ID = "_id";
@@ -34,6 +39,12 @@ public class DALSolution extends DALGeneralDataBase {
         super(context);
     }
 
+    /**
+     *
+     * @param bllSolution object of BLLSolution which data you want insert
+     * @param speedcuberId id of current user
+     * @return the row id of the newly inserted row, or -1 if an error occurred
+     */
     public int insert(BLLSolution bllSolution, int speedcuberId){
         if(bllSolution == null || bllSolution.getScramble() == null){
             return -1;
@@ -75,6 +86,16 @@ public class DALSolution extends DALGeneralDataBase {
         return id;
     }
 
+    /**
+     *
+     * @param dateFirst beginning date
+     * @param dateSecond ending date
+     * @param f2l 1 if true, 0 otherwise
+     * @param xcross 1 if true, 0 otherwise
+     * @param ollskip 1 if true, 0 otherwise
+     * @param pllskip 1 if true, 0 otherwise
+     * @return @return {@link ArrayList} of solutions id's to find in database
+     */
     public ArrayList<BLLSolution> findBetween(Date dateFirst, Date dateSecond, Integer f2l,
                                               Integer xcross, Integer ollskip, Integer pllskip){
         SQLiteDatabase db = dateBaseHelper.getReadableDatabase();
@@ -114,6 +135,12 @@ public class DALSolution extends DALGeneralDataBase {
         return listSolution;
     }
 
+    /**
+     *
+     * @param id of solution in databse
+     * @return if of scramble which are used in this solution, or -1 if an error occurred or didn't find
+     */
+
     public int getScrambleId(int id){
         SQLiteDatabase db = dateBaseHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT A."+DALScramble.ID+" FROM "+TABLE_NAME+" R JOIN "+DALScramble.TABLE_NAME
@@ -132,6 +159,10 @@ public class DALSolution extends DALGeneralDataBase {
         return scrambleId;
     }
 
+    /**
+     *
+     * @param id of solution to remove from database, if doesn't exist nothing happened
+     */
     public void remove(int id){
         int scrambleID = getScrambleId(id);
 

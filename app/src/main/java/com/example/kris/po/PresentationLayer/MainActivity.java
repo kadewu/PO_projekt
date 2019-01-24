@@ -13,6 +13,10 @@ import com.example.kris.po.R;
 public class MainActivity extends AppCompatActivity {
     public static String PACKAGE_NAME;
 
+    /**
+     * Method to start this activity
+     * @param context of previous activity, see {@link Context}
+     */
     public static void start(Context context) {
         Intent starter = new Intent(context, MainActivity.class);
         context.startActivity(starter);

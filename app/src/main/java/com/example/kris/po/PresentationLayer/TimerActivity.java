@@ -108,6 +108,11 @@ public class TimerActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     *
+     * @param millisec time in milliseconds
+     * @return time format to display on string
+     */
     public static String convertMillisecToDisplay(long millisec){
         if(millisec < 0){
             return "00:00.00";

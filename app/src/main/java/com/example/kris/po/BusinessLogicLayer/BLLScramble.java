@@ -2,6 +2,9 @@ package com.example.kris.po.BusinessLogicLayer;
 
 import java.util.Random;
 
+/**
+ * class to represent scramble in logic layer
+ */
 public class BLLScramble {
     private final static char[] moves = {'L', 'R', 'U', 'D', 'F', 'B'};
     private final static char[] movesModifiers = {'\0', '\'', '2'};
@@ -17,19 +20,35 @@ public class BLLScramble {
         this(null, scramble);
     }
 
+    /**
+     *
+     * @param id in database, if scramble isn't in database use {@link #BLLScramble(String)}
+     */
     public BLLScramble(Integer id, String scramble) {
         this.id = id;
         this.scramble = scramble;
     }
 
+    /**
+     *
+     * @return id of scramble in database, if scramble isn't in database return null
+     */
     public Integer getId(){
         return id;
     }
 
+    /**
+     *
+     * @return scramble, if you don't specified scramble return null
+     */
     public String getScramble() {
         return scramble;
     }
 
+    /**
+     *
+     * @return random generated scramble
+     */
     public static String genNewScramble(){
         StringBuilder scramble = new StringBuilder();
         Random rand = new Random();

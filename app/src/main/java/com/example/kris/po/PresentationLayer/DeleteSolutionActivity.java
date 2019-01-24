@@ -20,6 +20,10 @@ import java.util.Map;
 
 public class DeleteSolutionActivity extends AppCompatActivity {
 
+    /**
+     * Method to start this activity
+     * @param context of previous activity, see {@link Context}
+     */
     public static void start(Context context) {
         Intent starter = new Intent(context, DeleteSolutionActivity.class);
         context.startActivity(starter);
@@ -82,6 +86,12 @@ public class DeleteSolutionActivity extends AppCompatActivity {
         return progress == 1;
     }
 
+    /**
+     *
+     * @param textDate string to change into {@link Date}
+     * @param defaultIfEmpty string to change if first string is empty
+     * @return {@link Date}, or null if an error occurred
+     */
     public static Date validateAndSetDate(String textDate, String defaultIfEmpty){
         Date date;
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");

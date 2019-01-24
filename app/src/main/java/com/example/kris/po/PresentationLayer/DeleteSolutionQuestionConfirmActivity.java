@@ -15,6 +15,11 @@ import java.util.ArrayList;
 public class DeleteSolutionQuestionConfirmActivity extends AppCompatActivity {
     public static String ID_TO_REMOVE_MESSAGE = "idToRemove";
 
+    /**
+     * Method to start this activity
+     * @param context of previous activity, see {@link Context}
+     * @param idToRemove founded id in database to remove
+     */
     public static void start(Context context, ArrayList<Integer> idToRemove) {
         Intent starter = new Intent(context, DeleteSolutionQuestionConfirmActivity.class);
         starter.putExtra(ID_TO_REMOVE_MESSAGE, idToRemove);

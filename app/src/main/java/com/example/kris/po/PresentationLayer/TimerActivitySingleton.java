@@ -23,6 +23,9 @@ public class TimerActivitySingleton {
     private BLLTimer timer = new BLLTimer();
     private String scramble = null;
 
+    /**
+     * change scramble in timer activity, if scramble is the same nothing happened, otherwise activity setting visibility will be changed
+     */
     public void changeScramble(String scramble) {
         if(scramble == null || this.scramble == null || this.scramble.compareTo(scramble) != 0){
             timer.resetLastTimeMeasurement();
@@ -42,10 +45,17 @@ public class TimerActivitySingleton {
         return textViewScrambleVisibility;
     }
 
+    /**
+     *
+     * @return timer of this activity, that one are already setting, you can't set your own timer
+     */
     public BLLTimer getTimer(){
         return timer;
     }
 
+    /**
+     * set visibility settings in activity, you should called it after {@link #changeScramble(String)}
+     */
     public void setDefault(){
         if(timer.getLastTimeMeasurement() != BLLTimer.NO_MEASUREMENT) {
             buttonAddSolutionVisibility = View.VISIBLE;

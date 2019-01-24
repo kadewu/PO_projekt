@@ -22,6 +22,13 @@ public class SolutionsListActivity extends AppCompatActivity {
     public static String END_DATE_MESSAGE = "endDate";
     public static String PARAMETERS_MESSAGE = "param";
 
+    /**
+     * Method to start this activity
+     * @param context of previous activity, see {@link Context}
+     * @param startDate begging date for searching
+     * @param endDate ending date for searching
+     * @param param parameters for searching
+     */
     public static void start(Context context, Date startDate, Date endDate,
                              HashMap<String, Boolean> param) {
         Intent starter = new Intent(context, SolutionsListActivity.class);

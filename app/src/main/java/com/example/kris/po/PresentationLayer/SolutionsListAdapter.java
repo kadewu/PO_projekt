@@ -74,10 +74,18 @@ public class SolutionsListAdapter extends ArrayAdapter<SolutionsListActivity.Sol
         }
     }
 
+    /**
+     * change status checked (to remove) of given solution
+     * @param position of the solution in list view
+     */
     public void setCheck(int position){
         solutionArrayList.get(position).setChecked(!solutionArrayList.get(position).getChecked());
     }
 
+    /**
+     *
+     * @return {@link ArrayList} of id's to remove from database (choosing by user)
+     */
     public ArrayList<Integer> idListToRemove(){
         ArrayList<Integer> idListToRemove = new ArrayList<>();
         for(SolutionsListActivity.Solution e:solutionArrayList){

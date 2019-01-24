@@ -20,6 +20,12 @@ public class AddSolutionActivity extends AppCompatActivity {
     public static String SCRAMBLE_MESSAGE = "scramble";
     public static String TIME_MESSAGE = "time";
 
+    /**
+     * Method to start this activity
+     * @param context of previous activity, see {@link Context}
+     * @param scramble to use in this activity
+     * @param time of measurement in previous activity
+     */
     public static void start(Context context, String scramble, long time) {
         Intent starter = new Intent(context, AddSolutionActivity.class);
         starter.putExtra(SCRAMBLE_MESSAGE, scramble);
